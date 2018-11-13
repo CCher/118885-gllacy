@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Constantine Cher](https://up.htmlacademy.ru/htmlcss/23/user/118885).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Гуляев](https://htmlacademy.ru/profile/dima).
 
 ---
 
