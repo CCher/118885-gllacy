@@ -29,15 +29,74 @@
                         <li><a href="info.html">О Компании</a></li>
                     </ul>
                     <!-- END MENU BLOCK -->
-                    <!-- START USER BLOCK -->
-                    <ul class="user-block">
-                        <li><a href="#" class="search">Поиск</a></li>
-                        <li><a href="login.html" class="login">Вход</a></li>
-                        <li><a href="#basket" class="basket noempty">2 товара</a></li>
-                    </ul>
-                    <p class="timetable">С 10 до 20, ежедневно</p>
-                    <a href="tel:+78124502525" class="tel-header">8 812 450-25-25</a>
-                    <!-- END USER BLOCK -->
+                    <!-- START SEARCH BLOCK -->
+                    <div class="search">
+                        <a href="#search" class="search">Поиск</a>
+                    </div>
+                    <div id="search" class="modal modal-search">
+                        <form method="get" action="https://echo.htmlacademy.ru">
+                            <input type="text" name="search" placeholder="Что ищем?">
+                            <button type="submit" class="visually-hidden">Отправить</button>
+                        </form>
+                    </div>
+                    <!-- END SEARCH BLOCK -->
+                    <!-- START LOGIN BLOCK -->
+                    <div class="login">
+                        <a href="#login" class="login">Вход</a>
+                    </div>
+                    <div id="login" class="modal modal-login">
+                        <form class="user" method="post" action="https://echo.htmlacademy.ru">
+                            <p>
+                                <input id="user-login" type="email" name="login" placeholder="Электронная почта" required>
+                            </p>
+                            <p>
+                                <input id="user-password" type="password" name="password" placeholder="Пароль" required>
+                            </p>
+                            <p>
+                                <a href="forgot.html">Забыли пароль?</a>
+                                <a href="new-user.html">Новая регистрация</a>
+                            </p>
+                            <button type="submit" class="button modal-button">Войти</button>
+                        </form>
+                    </div>
+                    <!-- END LOGIN BLOCK -->
+                    <!-- START BASKET BLOCK -->
+                    <div class="basket">
+                        <a href="#basket" class="basket noempty">2 товара</a>
+                    </div>
+                    <div id="basket" class="modal basket-modal">
+                        <table>
+                            <tr>
+                                <td><a href="#"><img src="img/icon-x.svg" alt=""><span class="visually-hidden">Удалить товар из корзины</span></a></td>
+                                <td><img src="img/product-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+                                <td><span id="product-name1">Пломбир с апельсиновым джемом</span></td>
+                                <td><span id="product-weight1">1,5</span> кг</td>
+                                <td>х <span id="product-price1">200</span> руб.</td>
+                                <td><span id="product-total1">300 руб.</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><img src="img/icon-x.svg" alt=""><span class="visually-hidden">Удалить товар из корзины</span></a></td>
+                                <td><img src="img/product-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
+                                <td><span id="product-name2">Клубничный пломбир с присыпкой из белого шоколада</span></td>
+                                <td><span id="product-weight2">1,5</span> кг</td>
+                                <td> х <span id="product-price2">200 руб.</span></td>
+                                <td><span id="product-total2">300 руб.</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">Итого: <span id="bascket-total-sum">750 руб.</span></td>
+                            </tr>
+                        </table>
+                        <a href="order.html" class="button basket-button">
+                            Оформить заказ
+                        </a>
+                    </div>
+                    <!-- END BASKET BLOCK -->
+                    <!-- START HELPFULL BLOCK -->
+                    <div class="helpfull">
+                        <p class="timetable">С 10 до 20, ежедневно</p>
+                        <a href="tel:+78124502525" class="tel-header">8 812 450-25-25</a>
+                    </div>
+                    <!-- END HELPFULL BLOCK -->
                 </div>
             </div>
         </nav>
@@ -422,34 +481,6 @@
         </div>
     </footer>
     <!-- END FOOTER BLOCK -->
-    <!-- START BASCKET BLOCK -->
-    <div id="basket" class="modal basket-modal">
-        <table>
-            <tr>
-                <td><a href="#"><img src="img/icon-x.svg" alt=""><span class="visually-hidden">Удалить товар из корзины</span></a></td>
-                <td><img src="img/product-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
-                <td><span id="product-name1">Пломбир с апельсиновым джемом</span></td>
-                <td><span id="product-weight1">1,5</span> кг</td>
-                <td>х <span id="product-price1">200</span> руб.</td>
-                <td><span id="product-total1">300 руб.</span></td>
-            </tr>
-            <tr>
-                <td><a href="#"><img src="img/icon-x.svg" alt=""><span class="visually-hidden">Удалить товар из корзины</span></a></td>
-                <td><img src="img/product-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
-                <td><span id="product-name2">Клубничный пломбир с присыпкой из белого шоколада</span></td>
-                <td><span id="product-weight2">1,5</span> кг</td>
-                <td> х <span id="product-price2">200 руб.</span></td>
-                <td><span id="product-total2">300 руб.</span></td>
-            </tr>
-            <tr>
-                <td colspan="6">Итого: <span id="bascket-total-sum">750 руб.</span></td>
-            </tr>
-        </table>
-        <a href="order.html" class="button basket-button">
-            Оформить заказ
-        </a>
-
-    </div>
 </body>
 
 </html>

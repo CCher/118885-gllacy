@@ -25,17 +25,61 @@
                 <div class="conteiner">
                     <!-- START MENU BLOCK -->
                     <ul class="main-navigation">
-                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="catalog.html">Каталог</a>
+                            <ul class="submenu">
+                                <li><a href="new.html">Новинки</a></li>
+                                <li><a href="category1.html">Сливочное</a></li>
+                                <li><a href="category2.html">Щербеты</a></li>
+                                <li><a href="category3.html">Фруктовый лед</a></li>
+                                <li><a href="category4.html">Мелорин</a></li>
+                            </ul>
+                        </li>
                         <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
                         <li><a href="info.html">О Компании</a></li>
                     </ul>
                     <!-- END MENU BLOCK -->
-                    <!-- START USER BLOCK -->
-                    <ul class="user-block">
-                        <li><a href="#search" class="search">Поиск</a></li>
-                        <li><a href="#login" class="login">Вход</a></li>
-                        <li><a href="basket.html" class="basket">Пусто</a></li>
-                    </ul>
+                    <!-- START SEARCH BLOCK -->
+                    <div class="search">
+                        <a href="#search" class="search">Поиск</a>
+                    </div>
+                    <div id="search" class="modal modal-search">
+                        <form method="get" action="https://echo.htmlacademy.ru">
+                            <input type="text" name="search" placeholder="Что ищем?">
+                            <button type="submit" class="visually-hidden">Отправить</button>
+                        </form>
+                    </div>
+                    <!-- END SEARCH BLOCK -->
+                    <!-- START LOGIN BLOCK -->
+                    <div class="login">
+                        <a href="#login" class="login">Вход</a>
+                    </div>
+                    <div id="login" class="modal modal-login">
+                        <form class="user" method="post" action="https://echo.htmlacademy.ru">
+                            <p>
+                                <input id="user-login" type="email" name="login" placeholder="Электронная почта" required>
+                            </p>
+                            <p>
+                                <input id="user-password" type="password" name="password" placeholder="Пароль" required>
+                            </p>
+                            <p>
+                                <a href="forgot.html">Забыли пароль?</a>
+                                <a href="new-user.html">Новая регистрация</a>
+                            </p>
+                            <button type="submit" class="button modal-button">Войти</button>
+                        </form>
+                    </div>
+                    <!-- END LOGIN BLOCK -->
+                    <!-- START BASKET BLOCK -->
+                    <div class="basket">
+                        <a href="#basket" class="basket noempty">2 товара</a>
+                    </div>
+                    <!-- END BASKET BLOCK -->
+                    <!-- START HELPFULL BLOCK -->
+                    <div class="helpfull">
+                        <p class="timetable">С 10 до 20, ежедневно</p>
+                        <a href="tel:+78124502525" class="tel-header">8 812 450-25-25</a>
+                    </div>
+                    <!-- END HELPFULL BLOCK -->
                     <p class="timetable">С 10 до 20, ежедневно</p>
                     <a href="tel:+78124502525" class="tel-header">8 812 450-25-25</a>
                     <!-- END USER BLOCK -->
@@ -290,42 +334,6 @@
         </div>
     </footer>
     <!-- END FOOTER BLOCK -->
-    <!-- START CATALOG BLOCK -->
-    <div id="catalog" class="modal modal-catalog">
-        <ul>
-            <li><a href="new.html">Новинки</a></li>
-            <li><a href="category1.html">Сливочное</a></li>
-            <li><a href="category2.html">Щербеты</a></li>
-            <li><a href="category3.html">Фруктовый лед</a></li>
-            <li><a href="category4.html">Мелорин</a></li>
-        </ul>
-    </div>
-    <!-- END CATALOG BLOCK -->
-    <!-- START SEARCH BLOCK -->
-    <div id="search" class="modal modal-search">
-        <form method="get" action="https://echo.htmlacademy.ru">
-            <input type="text" name="search" placeholder="Что ищем?">
-            <button type="submit" class="visually-hidden">Отправить</button>
-        </form>
-    </div>
-    <!-- END SEARCH BLOCK -->
-    <!-- START LOGIN BLOCK -->
-    <div id="login" class="modal modal-login">
-        <form class="user" method="post" action="https://echo.htmlacademy.ru">
-            <p>
-                <input id="user-login" type="email" name="login" placeholder="Электронная почта" required>
-            </p>
-            <p>
-                <input id="user-password" type="password" name="password" placeholder="Пароль" required>
-            </p>
-            <p>
-                <a href="forgot.html">Забыли пароль?</a>
-                <a href="new-user.html">Новая регистрация</a>
-            </p>
-            <button type="submit" class="button modal-button">Войти</button>
-        </form>
-    </div>
-    <!-- END LOGIN BLOCK -->
     <!-- START FEEDBACK BLOCK -->
     <div id="feedback" class="modal modal-feedback">
         <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
