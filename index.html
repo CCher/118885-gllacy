@@ -25,15 +25,15 @@
                 <div class="conteiner">
                     <!-- START MENU BLOCK -->
                     <ul class="main-navigation">
-                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
                         <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
                         <li><a href="info.html">О Компании</a></li>
                     </ul>
                     <!-- END MENU BLOCK -->
                     <!-- START USER BLOCK -->
                     <ul class="user-block">
-                        <li><a href="#" class="search">Поиск</a></li>
-                        <li><a href="login.html" class="login">Вход</a></li>
+                        <li><a href="#search" class="search">Поиск</a></li>
+                        <li><a href="#login" class="login">Вход</a></li>
                         <li><a href="basket.html" class="basket">Пусто</a></li>
                     </ul>
                     <p class="timetable">С 10 до 20, ежедневно</p>
@@ -49,6 +49,7 @@
         <h1 class="title-hidden">Магазин Гллейси по продаже мороженого</h1>
         <!-- START SLIDER BLOCK -->
         <section class="main-slider">
+            <h2 class="visually-hidden">Слайдер на главной</h2>
             <ul class="main-slider-list">
                 <li class="main-slide main-slide-current">
                     <img class="main-slide-image" src="img/slide1.png" alt="Крем-брюле и пломбир с малиновым джемом">
@@ -176,7 +177,7 @@
                             </a>
                         </h3>
                         <p class="product-item-image">
-                            <img src="img/product-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                            <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                             <span class="image-hit"><img src="img/hit.svg" width="60" height="60" alt="Хит продаж"></span>
                         </p>
                         <p class="product-price">
@@ -226,16 +227,22 @@
             </h3>
         </section>
         <aside class="main-subscribe">
-            <p class="main-subscribe-text">
-                Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-            </p>
-            <!-- Форма подписки-->
+            <form class="user" method="post" action="https://echo.htmlacademy.ru">
+                <p class="main-subscribe-text">
+                    <label for="main-subscribe-email">
+                        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                    </label>
+                    <input id="main-subscribe-email" type="email" name="email" placeholder="Электронная почта" required>
+                </p>
+                <button type="submit">Отправить</button>
+            </form>
         </aside>
         <!-- END BLOG BLOCK -->
         <!-- START CONTACTS BLOCK -->
         <section class="main-contacts">
+            <h2 class="visually-hidden">Контакты</h2>
             <div class="map-icon">
-                <img src="img/pin.svg" alt="Gllacy Shop">                
+                <img src="img/pin.svg" alt="Gllacy Shop">
             </div>
             <div class="main-contacts-block">
                 <p class="main-contacts-text">
@@ -247,12 +254,12 @@
                     <span class="main-contacts-big">8 812 450-25-25</span><br>
                     (с 10 до 20 ежедневно)
                 </p>
-                <a href="#popup-os" class="button main-contacts-button">Форма обратной связи</a>
+                <a href="#feedback" class="button main-contacts-button">Форма обратной связи</a>
             </div>
             <div class="map">
-                <img src="img/map.jpg" height="430" width="1200" alt="Как нас найти">    
+                <img src="img/map.jpg" height="430" width="1200" alt="Как нас найти">
             </div>
-            
+
         </section>
         <!-- END CONTACTS BLOCK -->
     </main>
@@ -283,6 +290,58 @@
         </div>
     </footer>
     <!-- END FOOTER BLOCK -->
+    <!-- START CATALOG BLOCK -->
+    <div id="catalog" class="modal modal-catalog">
+        <ul>
+            <li><a href="new.html">Новинки</a></li>
+            <li><a href="category1.html">Сливочное</a></li>
+            <li><a href="category2.html">Щербеты</a></li>
+            <li><a href="category3.html">Фруктовый лед</a></li>
+            <li><a href="category4.html">Мелорин</a></li>
+        </ul>
+    </div>
+    <!-- END CATALOG BLOCK -->
+    <!-- START SEARCH BLOCK -->
+    <div id="search" class="modal modal-search">
+        <form method="get" action="https://echo.htmlacademy.ru">
+            <input type="text" name="search" placeholder="Что ищем?">
+            <button type="submit" class="visually-hidden">Отправить</button>
+        </form>
+    </div>
+    <!-- END SEARCH BLOCK -->
+    <!-- START LOGIN BLOCK -->
+    <div id="login" class="modal modal-login">
+        <form class="user" method="post" action="https://echo.htmlacademy.ru">
+            <p>
+                <input id="user-login" type="email" name="login" placeholder="Электронная почта" required>
+            </p>
+            <p>
+                <input id="user-password" type="password" name="password" placeholder="Пароль" required>
+            </p>
+            <p>
+                <a href="forgot.html">Забыли пароль?</a>
+                <a href="new-user.html">Новая регистрация</a>
+            </p>
+            <button type="submit" class="button modal-button">Войти</button>
+        </form>
+    </div>
+    <!-- END LOGIN BLOCK -->
+    <!-- START FEEDBACK BLOCK -->
+    <div id="feedback" class="modal modal-feedback">
+        <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
+            <p>
+                <input id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут">
+            </p>
+            <p>
+                <input id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required>
+            </p>
+            <p>
+                <textarea id="feedback-query" name="feedback-query" cols="40" rows="3" placeholder="Напишите что-нибудь..." required></textarea>
+            </p>
+            <button type="submit" class="button modal-button">Отправить</button>
+        </form>
+    </div>
+    <!-- END FEEDBACK BLOCK -->
 </body>
 
 </html>
