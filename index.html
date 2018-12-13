@@ -4,7 +4,7 @@
 <head>
     <!-- Designed by HTML-Academy student Constantine Cher  -->
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/logo-glacy-100x100.png" type="image/x-icon">
     <title>HTML Academy: магазин мороженого Гллэйси</title>
     <link href="css/normalize.min.css" rel="stylesheet">
@@ -24,62 +24,18 @@
             <div class="main-navigation-wrapper">
                 <div class="conteiner">
                     <!-- START MENU BLOCK -->
-                    <ul class="main-navigation">
-                        <li><a href="catalog.html">Каталог</a>
-                            <ul class="submenu">
-                                <li><a href="new.html">Новинки</a></li>
-                                <li><a href="category1.html">Сливочное</a></li>
-                                <li><a href="category2.html">Щербеты</a></li>
-                                <li><a href="category3.html">Фруктовый лед</a></li>
-                                <li><a href="category4.html">Мелорин</a></li>
-                            </ul>
-                        </li>
+                    <ul class="site-navigation">
+                        <li><a href="#catalog">Каталог</a></li>
                         <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
                         <li><a href="info.html">О Компании</a></li>
                     </ul>
                     <!-- END MENU BLOCK -->
-                    <!-- START SEARCH BLOCK -->
-                    <div class="search">
-                        <a href="#search" class="search">Поиск</a>
-                    </div>
-                    <div id="search" class="modal modal-search">
-                        <form method="get" action="https://echo.htmlacademy.ru">
-                            <input type="text" name="search" placeholder="Что ищем?">
-                            <button type="submit" class="visually-hidden">Отправить</button>
-                        </form>
-                    </div>
-                    <!-- END SEARCH BLOCK -->
-                    <!-- START LOGIN BLOCK -->
-                    <div class="login">
-                        <a href="#login" class="login">Вход</a>
-                    </div>
-                    <div id="login" class="modal modal-login">
-                        <form class="user" method="post" action="https://echo.htmlacademy.ru">
-                            <p>
-                                <input id="user-login" type="email" name="login" placeholder="Электронная почта" required>
-                            </p>
-                            <p>
-                                <input id="user-password" type="password" name="password" placeholder="Пароль" required>
-                            </p>
-                            <p>
-                                <a href="forgot.html">Забыли пароль?</a>
-                                <a href="new-user.html">Новая регистрация</a>
-                            </p>
-                            <button type="submit" class="button modal-button">Войти</button>
-                        </form>
-                    </div>
-                    <!-- END LOGIN BLOCK -->
-                    <!-- START BASKET BLOCK -->
-                    <div class="basket">
-                        <a href="#basket" class="basket noempty">2 товара</a>
-                    </div>
-                    <!-- END BASKET BLOCK -->
-                    <!-- START HELPFULL BLOCK -->
-                    <div class="helpfull">
-                        <p class="timetable">С 10 до 20, ежедневно</p>
-                        <a href="tel:+78124502525" class="tel-header">8 812 450-25-25</a>
-                    </div>
-                    <!-- END HELPFULL BLOCK -->
+                    <!-- START USER BLOCK -->
+                    <ul class="user-navigation">
+                        <li><a href="#search" class="search"><span>Поиск</span></a></li>
+                        <li class="login"><a href="#login">Вход</a></li>
+                        <li class="basket"><a href="basket.html">Пусто</a></li>
+                    </ul>
                     <p class="timetable">С 10 до 20, ежедневно</p>
                     <a href="tel:+78124502525" class="tel-header">8 812 450-25-25</a>
                     <!-- END USER BLOCK -->
@@ -90,7 +46,7 @@
     <!-- END HEADER BLOCK -->
     <!-- START MAIN BLOCK -->
     <main>
-        <h1 class="title-hidden">Магазин Гллейси по продаже мороженого</h1>
+        <h1 class="visually-hidden">Магазин Гллейси по продаже мороженого</h1>
         <!-- START SLIDER BLOCK -->
         <section class="main-slider">
             <h2 class="visually-hidden">Слайдер на главной</h2>
@@ -132,7 +88,7 @@
         <!-- END SLIDER BLOCK -->
         <!-- START ADVERTISE BLOCK -->
         <section class="advertise">
-            <h2 class="visual-hidden">Реклама акций на товары</h2>
+            <h2 class="visually-hidden">Реклама акций на товары</h2>
             <ul class="advertise-list">
                 <li class="advertise-item">
                     <h2 class="advertise-item-title">Малинка даром!</h2>
@@ -153,7 +109,7 @@
         <!-- END ADVERTISE BLOCK -->
         <!-- START PRODUCT BLOCK -->
         <section class="product-line">
-            <h2 class="visual-hidden">Товары на главной</h2>
+            <h2 class="visually-hidden">Товары на главной</h2>
             <ul class="product-list">
                 <!-- START PRODUCT #1 BLOCK -->
                 <li class="product-item">
@@ -267,19 +223,21 @@
         <section class="main-blog">
             <h2 class="main-blog-title">Новое в нашем блоге</h2>
             <h3 class="main-blog-description">
-                <a href="blog.html" class="main-blog-link">10 способов сервировки фруктовых щербетов к столу</a>
+                <a href="blog.html" class="main-blog-link">10 способов сервировки<br> фруктовых щербетов<br>к столу</a>
             </h3>
         </section>
         <aside class="main-subscribe">
+           <div class="main-subscribe-bg">
             <form class="user" method="post" action="https://echo.htmlacademy.ru">
                 <p class="main-subscribe-text">
                     <label for="main-subscribe-email">
                         Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                     </label>
                     <input id="main-subscribe-email" type="email" name="email" placeholder="Электронная почта" required>
-                </p>
-                <button type="submit">Отправить</button>
+                    <button type="submit" class="button advertise-item-button">Отправить</button>
+                </p>                
             </form>
+            </div>
         </aside>
         <!-- END BLOG BLOCK -->
         <!-- START CONTACTS BLOCK -->
@@ -320,7 +278,7 @@
         </div>
         <div class="footer-nav">
             <ul>
-                <li><a href="#" class="footer-nav-text"><b>Для поставщиков</b></a></li>
+                <li class="icon-heart"> <a href="#" class="footer-nav-text"><b>Для поставщиков</b></a></li>
                 <li><a href="#" class="footer-nav-text">Наши документы</a></li>
                 <li><a href="#" class="footer-nav-text">О производстве</a></li>
                 <li><a href="#" class="footer-nav-text">Экологические стандарты</a></li>
@@ -329,13 +287,50 @@
         <div class="copyright-block">
             <img src="img/logo-htmlacademy-small.png" class="copyright-image" width="108" height="39" alt="HTML Academy">
             <p class="copyright-text">
-                Сделано в <a href="https://htmlacademy.ru" class="copyright-link">HTML Academy</a> &copy; 2017
+                Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017
             </p>
         </div>
     </footer>
     <!-- END FOOTER BLOCK -->
+    <!-- START CATALOG BLOCK -->
+    <div id="catalog" class="modal modal-catalog">
+        <ul>
+            <li><a href="new.html"><b>Новинки</b></a><hr></li>
+            <li><a href="category1.html" class="">Сливочное</a></li>
+            <li><a href="category2.html" class="">Щербеты</a></li>
+            <li><a href="category3.html" class="">Фруктовый лед</a></li>
+            <li><a href="category4.html" class="current-page">Мелорин</a></li> <!-- for example -->
+        </ul>
+    </div>
+    <!-- END CATALOG BLOCK -->
+    <!-- START SEARCH BLOCK -->
+    <div id="search" class="modal modal-search">
+        <form method="get" action="https://echo.htmlacademy.ru">
+            <input type="text" name="search" placeholder="Что ищем?">
+            <button type="submit" class="visually-hidden">Отправить</button>
+        </form>
+    </div>
+    <!-- END SEARCH BLOCK -->
+    <!-- START LOGIN BLOCK -->
+    <div id="login" class="modal modal-login">
+        <form class="user" method="post" action="https://echo.htmlacademy.ru">
+            <p>
+                <input id="user-login" type="email" name="login" placeholder="Электронная почта" required>
+            </p>
+            <p>
+                <input id="user-password" type="password" name="password" placeholder="Пароль" required>
+            </p>
+            <p>
+                <a href="forgot.html">Забыли пароль?</a>
+                <a href="new-user.html">Новая регистрация</a>
+            </p>
+            <button type="submit" class="button modal-button">Войти</button>
+        </form>
+    </div>
+    <!-- END LOGIN BLOCK -->
     <!-- START FEEDBACK BLOCK -->
     <div id="feedback" class="modal modal-feedback">
+       <h2>Мы обязательно вам ответим!</h2>
         <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
             <p>
                 <input id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут">
