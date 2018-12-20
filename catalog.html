@@ -11,7 +11,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>    
+<body>
     <!-- START HEADER BLOCK -->
     <header class="main-header">
         <nav class="main-navigation">
@@ -24,17 +24,52 @@
                 <div class="conteiner">
                     <!-- START MENU BLOCK -->
                     <ul class="site-navigation">
-                        <li><a href="#catalog"  class="site-navigation-current">Каталог</a></li>
+                        <li><a href="#catalog" class="site-navigation-current">Каталог</a></li>
                         <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
                         <li><a href="info.html">О Компании</a></li>
                     </ul>
                     <!-- END MENU BLOCK -->
                     <!-- START USER BLOCK -->
                     <ul class="user-navigation">
-                        <li><a href="#search" class="search"><span>Поиск</span></a></li>
+                        <li><a href="#search" class="search"><span class="visually-hidden">Поиск</span></a></li>
                         <li class="login"><a href="#login">Вход</a></li>
                         <li class="basket"><a href="basket.html">Пусто</a></li>
                     </ul>
+                    <!-- START BASCKET BLOCK -->
+                    <div id="basket" class="modal basket-modal">
+                        <table>
+                            <tr>
+                                <td><a href="#"><img src="img/icon-x.svg" alt=""><span class="visually-hidden">Удалить товар из корзины</span></a></td>
+                                <td class="tdpict"><img src="img/product-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+                                <td class="tdname"><span class="product-name">Пломбир с апельсиновым джемом</span></td>
+                                <td><span class="product-weight">1,5</span> кг</td>
+                                <td>х <span class="basket-product-price">200 руб.</span></td>
+                                <td class="tdsum"><span class="product-total">300 руб.</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><img src="img/icon-x.svg" alt=""><span class="visually-hidden">Удалить товар из корзины</span></a></td>
+                                <td class="tdpict"><img src="img/product-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
+                                <td class="tdname"><span class="product-name">Клубничный пломбир с присыпкой из белого шоколада</span></td>
+                                <td><span class="product-weight">1,5</span> кг</td>
+                                <td> х <span class="basket-product-price">200 руб.</span></td>
+                                <td class="tdsum"><span class="product-total">300 руб.</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="tdtotal">Итого: <span class="bascket-total-sum">750 руб.</span></td>
+                            </tr>
+                        </table>
+                        <div class="basket-button-block">
+                            <a href="order.html" class="button basket-button">
+                                Оформить заказ
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END BASCKET BLOCK -->
                     <p class="timetable">С 10 до 20, ежедневно</p>
                     <a href="tel:+78124502525" class="tel-header">8 812 450-25-25</a>
                     <!-- END USER BLOCK -->
@@ -48,8 +83,8 @@
         <!-- START BREADSCRUMBS BLOCK -->
         <div class="breadscrumbs">
             <ul>
-                <li><a href="index.html">Главная</a> » </li>
-                <li><a href="catalog.html">Каталог</a> » </li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
                 <li class="breadscrumb-current">Сливочное</li>
             </ul>
         </div>
@@ -361,7 +396,7 @@
                             <img src="img/product-12.jpg" width="267" height="267" alt="Сливочное мороженое с мятным сиропом">
                         </p>
                         <p class="product-price">
-                            420  &#8381;<span class="product-item-weight">/кг</span>
+                            420 &#8381;<span class="product-item-weight">/кг</span>
                         </p>
                     </div>
                 </li>
@@ -410,40 +445,7 @@
         </div>
     </footer>
     <!-- END FOOTER BLOCK -->
-    <!-- START BASCKET BLOCK -->
-    <div id="basket" class="modal basket-modal">
-        <table>
-            <tr>
-                <td><a href="#"><img src="img/icon-x.svg" alt=""><span class="visually-hidden">Удалить товар из корзины</span></a></td>
-                <td class="tdpict"><img src="img/product-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
-                <td class="tdname"><span class="product-name">Пломбир с апельсиновым джемом</span></td>
-                <td><span class="product-weight">1,5</span> кг</td>
-                <td>х <span class="basket-product-price">200 руб.</span></td>
-                <td class="tdsum"><span class="product-total">300 руб.</span></td>
-            </tr>
-            <tr>
-                <td><a href="#"><img src="img/icon-x.svg" alt=""><span class="visually-hidden">Удалить товар из корзины</span></a></td>
-                <td class="tdpict"><img src="img/product-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
-                <td  class="tdname"><span class="product-name">Клубничный пломбир с присыпкой из белого шоколада</span></td>
-                <td><span class="product-weight">1,5</span> кг</td>
-                <td> х <span class="basket-product-price">200 руб.</span></td>
-                <td class="tdsum"><span class="product-total">300 руб.</span></td>
-            </tr>
-            <tr>
-                <td colspan="6"><hr></td>
-            </tr>
-            <tr>
-                <td colspan="6"  class="tdtotal">Итого: <span class="bascket-total-sum">750 руб.</span></td>
-            </tr>
-        </table>
-        <div class="basket-button-block">
-           <a href="order.html" class="button basket-button">
-            Оформить заказ
-        </a>
-        </div>
-        
 
-    </div>
 </body>
 
 </html>

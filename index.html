@@ -25,17 +25,52 @@
                 <div class="conteiner">
                     <!-- START MENU BLOCK -->
                     <ul class="site-navigation">
-                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="catalog.html">Каталог</a>
+                            <ul id="submenu" class="modal modal-catalog visually-hidden">
+                                <li><a href="new.html"><b>Новинки</b></a>
+                                    <hr>
+                                </li>
+                                <li><a href="category1.html" class="">Сливочное</a></li>
+                                <li><a href="category2.html" class="">Щербеты</a></li>
+                                <li><a href="category3.html" class="">Фруктовый лед</a></li>
+                                <li><a href="category4.html" class="current-page">Мелорин</a></li> <!-- for example -->
+                            </ul>
+                        </li>
                         <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
                         <li><a href="info.html">О Компании</a></li>
                     </ul>
                     <!-- END MENU BLOCK -->
                     <!-- START USER BLOCK -->
                     <ul class="user-navigation">
-                        <li><a href="#search" class="search"><span>Поиск</span></a></li>
+                        <li><a href="#search" class="search"><span class="visually-hidden">Поиск</span></a></li>
                         <li class="login"><a href="#login">Вход</a></li>
                         <li class="basket"><a href="basket.html">Пусто</a></li>
                     </ul>
+                    <!-- START SEARCH BLOCK -->
+                    <div id="search" class="modal modal-search">
+                        <form method="get" action="https://echo.htmlacademy.ru">
+                            <input type="text" name="search" placeholder="Что ищем?">
+                            <button type="submit" class="visually-hidden">Отправить</button>
+                        </form>
+                    </div>
+                    <!-- END SEARCH BLOCK -->
+                    <!-- START LOGIN BLOCK -->
+                    <div id="login" class="modal modal-login">
+                        <form class="user" method="post" action="https://echo.htmlacademy.ru">
+                            <p>
+                                <input id="user-login" type="email" name="login" placeholder="Электронная почта" required>
+                            </p>
+                            <p>
+                                <input id="user-password" type="password" name="password" placeholder="Пароль" required>
+                            </p>
+                            <p>
+                                <a href="forgot.html">Забыли пароль?</a>
+                                <a href="new-user.html">Новая регистрация</a>
+                            </p>
+                            <button type="submit" class="button modal-button">Войти</button>
+                        </form>
+                    </div>
+                    <!-- END LOGIN BLOCK -->
                     <p class="timetable">С 10 до 20, ежедневно</p>
                     <a href="tel:+78124502525" class="tel-header">8 812 450-25-25</a>
                     <!-- END USER BLOCK -->
@@ -227,16 +262,16 @@
             </h3>
         </section>
         <aside class="main-subscribe">
-           <div class="main-subscribe-bg">
-            <form class="user" method="post" action="https://echo.htmlacademy.ru">
-                <p class="main-subscribe-text">
-                    <label for="main-subscribe-email">
-                        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-                    </label>
-                    <input id="main-subscribe-email" type="email" name="email" placeholder="Электронная почта" required>
-                    <button type="submit" class="button advertise-item-button">Отправить</button>
-                </p>                
-            </form>
+            <div class="main-subscribe-bg">
+                <form class="user" method="post" action="https://echo.htmlacademy.ru">
+                    <p class="main-subscribe-text">
+                        <label for="main-subscribe-email">
+                            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                        </label>
+                        <input id="main-subscribe-email" type="email" name="email" placeholder="Электронная почта" required>
+                        <button type="submit" class="button advertise-item-button">Отправить</button>
+                    </p>
+                </form>
             </div>
         </aside>
         <!-- END BLOG BLOCK -->
@@ -292,45 +327,10 @@
         </div>
     </footer>
     <!-- END FOOTER BLOCK -->
-    <!-- START CATALOG BLOCK -->
-    <div id="catalog" class="modal modal-catalog">
-        <ul>
-            <li><a href="new.html"><b>Новинки</b></a><hr></li>
-            <li><a href="category1.html" class="">Сливочное</a></li>
-            <li><a href="category2.html" class="">Щербеты</a></li>
-            <li><a href="category3.html" class="">Фруктовый лед</a></li>
-            <li><a href="category4.html" class="current-page">Мелорин</a></li> <!-- for example -->
-        </ul>
-    </div>
-    <!-- END CATALOG BLOCK -->
-    <!-- START SEARCH BLOCK -->
-    <div id="search" class="modal modal-search">
-        <form method="get" action="https://echo.htmlacademy.ru">
-            <input type="text" name="search" placeholder="Что ищем?">
-            <button type="submit" class="visually-hidden">Отправить</button>
-        </form>
-    </div>
-    <!-- END SEARCH BLOCK -->
-    <!-- START LOGIN BLOCK -->
-    <div id="login" class="modal modal-login">
-        <form class="user" method="post" action="https://echo.htmlacademy.ru">
-            <p>
-                <input id="user-login" type="email" name="login" placeholder="Электронная почта" required>
-            </p>
-            <p>
-                <input id="user-password" type="password" name="password" placeholder="Пароль" required>
-            </p>
-            <p>
-                <a href="forgot.html">Забыли пароль?</a>
-                <a href="new-user.html">Новая регистрация</a>
-            </p>
-            <button type="submit" class="button modal-button">Войти</button>
-        </form>
-    </div>
-    <!-- END LOGIN BLOCK -->
+
     <!-- START FEEDBACK BLOCK -->
     <div id="feedback" class="modal modal-feedback">
-       <h2>Мы обязательно вам ответим!</h2>
+        <h2>Мы обязательно вам ответим!</h2>
         <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
             <p>
                 <input id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут">
