@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="assets/images/logo-glacy-100x100.png" type="image/x-icon">
     <title>HTML Academy: Каталог магазина мороженого Гллэйси</title>
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -59,7 +59,7 @@
                     </ul>
                     <!-- END MENU BLOCK -->
                     <!-- START USER BLOCK -->
-                    <ul class="user-navigation">
+                    <ul class="user-navigation user-navigation-inner">
                         <li class="search-panel">
                             <a class="search-button" href="#">
                                 <span class="visible-hidden">Найти</span>
@@ -144,19 +144,13 @@
             <div class="user-info has-breadcrumbs">
                 <ul class="breadcrumbs">
                     <li class="crumb">
-                        <a href="index.html"> Главная </a>
+                        <a href="index.html">&nbsp;Главная&nbsp;</a>
                     </li>
                     <li class="crumb">
-                        &#187;
-                    </li>
-                    <li class="crumb">
-                        <a href="catalog.html"> Каталог </a>
-                    </li>
-                    <li class="crumb">
-                        &#187;
+                        <a href="catalog.html">&nbsp;Каталог&nbsp;</a>
                     </li>
                     <li class="crumb crumb-active">
-                        Сливочное
+                        &nbsp;Сливочное
                     </li>
                 </ul>
                 <!-- END BREADSCRUMBS BLOCK -->
@@ -401,7 +395,7 @@
                 <!-- START PAGINATION BLOCK -->
                 <ul class="pagination-list">
                     <li class="pagination-item">
-                        <a class="prev_page disabled" href="#">
+                        <a class="prev_page dsbld" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
                                 <path fill="#C1C6CE" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z" /></svg>
                         </a>
