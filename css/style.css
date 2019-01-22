@@ -1910,8 +1910,7 @@ a.bold-href {
 
 .prev_page,
 .prev_page:hover,
-.prev_page:focus,
-    {
+.prev_page:focus {
     background-color: transparent;
 }
 
@@ -2136,33 +2135,93 @@ a.bold-href {
     padding: 0;
 }
 
-.modal-callback input,
-.modal-callback textarea {
-    padding: 9px;
+.modal-callback input {
     font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
     color: #323232;
     background-color: #ffffff;
     border: 1px solid #d3d3d3;
     border-radius: 5px;
+    padding: 9px;
 }
 
-.modal-callback input::-webkit-input-placeholder,
-.modal-callback input::-moz-placeholder,
-.modal-callback input:-moz-placeholder,
+.modal-callback textarea {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+    color: #323232;
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 9px;
+}
+
+.modal-callback input::-webkit-input-placeholder {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    color: #999999;
+}
+
+.modal-callback input::-moz-placeholder {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    color: #999999;
+}
+
+.modal-callback input:-moz-placeholder {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    color: #999999;
+}
+
 .modal-callback input:-ms-input-placeholder {
     font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
     color: #999999;
 }
 
-.modal-callback textarea::-webkit-input-placeholder,
-.modal-callback textarea::-moz-placeholder,
-.modal-callback textarea:-moz-placeholder,
+.modal-callback input::placeholder {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    color: #999999;
+}
+
+.modal-callback textarea::-webkit-input-placeholder {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    color: #999999;
+}
+
+.modal-callback textarea::-moz-placeholder {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    color: #999999;
+}
+
+.modal-callback textarea:-moz-placeholder {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    color: #999999;
+}
+
 .modal-callback textarea:-ms-input-placeholder {
     font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
     color: #999999;
 }
 
-.modal-callback input:hover,
+.modal-callback textarea::placeholder {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    color: #999999;
+}
+
+.modal-callback input:hover {
+    border: 2px solid #c7c6c5;
+    padding: 8px;
+    color: #323232;
+    outline: none;
+}
+
 .modal-callback textarea:hover {
     border: 2px solid #c7c6c5;
     padding: 8px;
@@ -2170,7 +2229,14 @@ a.bold-href {
     outline: none;
 }
 
-.modal-callback input:focus,
+.modal-callback input:focus {
+    border: 2px solid #8fbdec;
+    padding: 8px;
+    color: #323232;
+    font-weight: 700;
+    outline: none;
+}
+
 .modal-callback textarea:focus {
     border: 2px solid #8fbdec;
     padding: 8px;
